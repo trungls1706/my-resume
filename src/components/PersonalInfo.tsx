@@ -27,7 +27,7 @@ export const PersonalInfo = ({ showDetails }: PersonalInfoProps) => {
       initial={{ x: -20, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className={`w-full lg:w-[25%] bg-white p-4 lg:p-6 shadow-lg lg:fixed lg:left-0 lg:h-screen overflow-y-auto order-first ${
+      className={`w-full lg:w-[28.57%] bg-white p-4 lg:p-6 shadow-lg lg:fixed lg:left-0 lg:h-screen overflow-y-auto order-first ${
         !showDetails ? 'hidden lg:block' : 'block'
       }`}
     >

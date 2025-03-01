@@ -20,8 +20,7 @@ export default function Home() {
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.6 }}
-
-        className={`w-full lg:w-[75%] overflow-y-auto p-4 lg:p-6 order-last lg:ml-[25%] ${
+        className={`flex-1 overflow-y-auto p-4 lg:p-6 order-last lg:ml-[28.57%] ${
           showDetails ? 'hidden lg:block' : 'block'
         }`}
       >
