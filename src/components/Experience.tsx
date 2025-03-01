@@ -4,7 +4,7 @@ import { ExperienceCard } from './ExperienceCard';
 export const Experience = () => {
   return (
     <section>
-      <motion.h2 
+      <motion.h2
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.4 }}
@@ -17,4 +17,4 @@ export const Experience = () => {
       ))}
     </section>
   );
-}; 
+};

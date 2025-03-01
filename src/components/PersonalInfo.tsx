@@ -8,7 +8,7 @@ export const PersonalInfo = ({ showDetails }: PersonalInfoProps) => {
   const skills = ['React', 'Node.js', 'TypeScript', 'Python', 'AWS', 'Docker'];
 
   return (
-    <motion.div 
+    <motion.div
       initial={{ x: -20, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
@@ -17,13 +17,13 @@ export const PersonalInfo = ({ showDetails }: PersonalInfoProps) => {
       }`}
     >
       <div className="max-w-sm mx-auto">
-        <motion.div 
+        <motion.div
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.3 }}
           className="text-center mb-6 lg:mb-8"
         >
-          <motion.div 
+          <motion.div
             whileHover={{ scale: 1.1 }}
             className="w-24 h-24 lg:w-32 lg:h-32 bg-gray-300 rounded-full mx-auto mb-4"
           >
@@ -76,21 +76,21 @@ export const PersonalInfo = ({ showDetails }: PersonalInfoProps) => {
           >
             <h2 className="text-xl lg:text-2xl font-bold mb-3 lg:mb-4">Contact</h2>
             <div className="space-y-2">
-              <motion.p 
+              <motion.p
                 whileHover={{ x: 10 }}
                 className="flex items-center gap-2 text-sm lg:text-base"
               >
                 <span className="text-gray-600">📧</span>
                 <span>john.doe@example.com</span>
               </motion.p>
-              <motion.p 
+              <motion.p
                 whileHover={{ x: 10 }}
                 className="flex items-center gap-2 text-sm lg:text-base"
               >
                 <span className="text-gray-600">📱</span>
                 <span>+1 (123) 456-7890</span>
               </motion.p>
-              <motion.p 
+              <motion.p
                 whileHover={{ x: 10 }}
                 className="flex items-center gap-2 text-sm lg:text-base"
               >
@@ -103,4 +103,4 @@ export const PersonalInfo = ({ showDetails }: PersonalInfoProps) => {
       </div>
     </motion.div>
   );
-}; 
+};

@@ -4,7 +4,7 @@ import { ProjectCard } from './ProjectCard';
 export const Projects = () => {
   return (
     <section>
-      <motion.h2 
+      <motion.h2
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.2 }}
@@ -17,4 +17,4 @@ export const Projects = () => {
       ))}
     </section>
   );
-}; 
+};

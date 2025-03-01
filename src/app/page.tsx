@@ -14,9 +14,9 @@ export default function Home() {
     <div className="flex flex-col lg:flex-row min-h-screen bg-gray-100">
       <MobileMenuButton showDetails={showDetails} setShowDetails={setShowDetails} />
       <PersonalInfo showDetails={showDetails} />
-      
+
       {/* Projects and Experience Section */}
-      <motion.div 
+      <motion.div
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.6 }}

@@ -37,4 +37,4 @@ export const MobileMenuButton = ({ showDetails, setShowDetails }: MobileMenuButt
       </svg>
     </button>
   );
-}; 
+};

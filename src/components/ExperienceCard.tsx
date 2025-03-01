@@ -17,9 +17,9 @@ export const ExperienceCard = ({ company, index }: ExperienceCardProps) => {
       <h3 className="text-lg lg:text-xl font-semibold mb-2">Company {company}</h3>
       <p className="text-gray-500 mb-2 text-sm lg:text-base">Senior Developer • 2020 - Present</p>
       <p className="text-gray-600 text-sm lg:text-base">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua.
       </p>
     </motion.div>
   );
-}; 
+};
