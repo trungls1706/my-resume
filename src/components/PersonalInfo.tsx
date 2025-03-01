@@ -6,7 +6,21 @@ interface PersonalInfoProps {
 }
 
 export const PersonalInfo = ({ showDetails }: PersonalInfoProps) => {
-  const skills = ['React', 'Node.js', 'TypeScript', 'Python', 'AWS', 'Docker'];
+  const skills = [
+    'React Native',
+    'React Js',
+    'Next Js',
+    'Tailwind CSS',
+    'Marterial UI',
+    'Redux',
+    'Context API',
+    'JavaScript',
+    'TypeScript',
+    'REST API',
+    'Axios',
+    'Expo',
+    'Firebase',
+  ];
 
   return (
     <motion.div
@@ -30,8 +44,8 @@ export const PersonalInfo = ({ showDetails }: PersonalInfoProps) => {
           >
             {/* Profile image placeholder */}
           </motion.div>
-          <h1 className="text-3xl lg:text-4xl font-bold mb-2">John Doe</h1>
-          <p className="text-lg lg:text-xl text-gray-600 mb-4">Full Stack Developer</p>
+          <h1 className="text-3xl lg:text-4xl font-bold mb-2">Ly Son Trung</h1>
+          <p className="text-lg lg:text-xl text-gray-600 mb-4">Frontend React Developer</p>
           <motion.div
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -49,8 +63,8 @@ export const PersonalInfo = ({ showDetails }: PersonalInfoProps) => {
           >
             <h2 className="text-xl lg:text-2xl font-bold mb-3 lg:mb-4">About Me</h2>
             <p className="text-gray-600 text-sm lg:text-base">
-              Passionate developer with 5+ years of experience in building web applications.
-              Specialized in React, Node.js, and modern web technologies.
+              Passionate Frontend Developer with 5+ years of experience in building web and mobile
+              applications. Specialized in React, React Native, and modern frontend technologies.
             </p>
           </motion.section>
 
@@ -89,21 +103,21 @@ export const PersonalInfo = ({ showDetails }: PersonalInfoProps) => {
                 className="flex items-center gap-2 text-sm lg:text-base"
               >
                 <span className="text-gray-600">📧</span>
-                <span>john.doe@example.com</span>
+                <span>trungls1706@gmail.com</span>
               </motion.p>
               <motion.p
                 whileHover={{ x: 10 }}
                 className="flex items-center gap-2 text-sm lg:text-base"
               >
                 <span className="text-gray-600">📱</span>
-                <span>+1 (123) 456-7890</span>
+                <span>(+84) 0909 659 318</span>
               </motion.p>
               <motion.p
                 whileHover={{ x: 10 }}
                 className="flex items-center gap-2 text-sm lg:text-base"
               >
                 <span className="text-gray-600">📍</span>
-                <span>San Francisco, CA</span>
+                <span>Ho Chi Minh, Vietnam</span>
               </motion.p>
             </div>
           </motion.section>
