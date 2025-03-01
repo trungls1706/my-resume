@@ -24,11 +24,11 @@ const ExperienceItem = ({ year, company, position, location, description, isLast
       <div className="flex gap-6">
         {/* Left side - Timeline */}
         <div className="w-32 relative flex-shrink-0">
-          <div className={`absolute right-0 w-[2px] bg-gradient-to-b from-blue-500 to-teal-500 top-0 ${isLast ? 'bottom-0' : '-bottom-12'}`} />
+          <div className={`absolute right-0 w-[2px] bg-gradient-to-b from-sky-300 to-cyan-400 top-0 ${isLast ? 'bottom-0' : '-bottom-12'}`} />
           <motion.button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="absolute right-[-16px] w-8 h-8 rounded-full bg-white border-2 border-blue-500 flex items-center justify-center cursor-pointer hover:bg-blue-50 shadow-md"
-            whileHover={{ scale: 1.1, borderColor: '#0EA5E9' }}
+            className="absolute right-[-16px] w-8 h-8 rounded-full bg-white border-2 border-sky-300 flex items-center justify-center cursor-pointer hover:bg-sky-50 shadow-md"
+            whileHover={{ scale: 1.1, borderColor: '#7DD3FC' }}
             whileTap={{ scale: 0.95 }}
             transition={{ 
               type: "spring", 
@@ -43,7 +43,7 @@ const ExperienceItem = ({ year, company, position, location, description, isLast
                 stiffness: 200,
                 damping: 20
               }}
-              className="text-blue-500 text-xl font-bold leading-none"
+              className="text-sky-400 text-xl font-bold leading-none"
               style={{ marginTop: '-1px' }}
             >
               +
@@ -68,10 +68,10 @@ const ExperienceItem = ({ year, company, position, location, description, isLast
           >
             <div className="flex flex-col gap-2">
               <div className="flex items-center justify-between">
-                <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">{company}</h3>
+                <h3 className="text-2xl font-bold bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent">{company}</h3>
                 <span className="text-sm text-gray-500 font-medium bg-gray-100 px-3 py-1 rounded-full">{location}</span>
               </div>
-              <h4 className="text-lg font-semibold text-blue-600">{position}</h4>
+              <h4 className="text-lg font-semibold text-sky-500">{position}</h4>
             </div>
 
             <AnimatePresence mode="wait">
@@ -106,7 +106,7 @@ const ExperienceItem = ({ year, company, position, location, description, isLast
                           }}
                           className="flex gap-3 items-start"
                         >
-                          <div className="w-2 h-2 rounded-full bg-blue-500 mt-2 flex-shrink-0" />
+                          <div className="w-2 h-2 rounded-full bg-sky-300 mt-2 flex-shrink-0" />
                           <p className="text-gray-700 leading-relaxed font-medium">
                             {desc}
                           </p>
@@ -159,7 +159,7 @@ export const Experience = () => {
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.2 }}
-        className="text-4xl font-bold mb-12 bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent"
+        className="text-4xl font-bold mb-12 bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent"
       >
         EXPERIENCES
       </motion.h2>
