@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { ResumeButton } from './ResumeButton';
 
 interface PersonalInfoProps {
   showDetails: boolean;
@@ -30,7 +31,14 @@ export const PersonalInfo = ({ showDetails }: PersonalInfoProps) => {
             {/* Profile image placeholder */}
           </motion.div>
           <h1 className="text-3xl lg:text-4xl font-bold mb-2">John Doe</h1>
-          <p className="text-lg lg:text-xl text-gray-600">Full Stack Developer</p>
+          <p className="text-lg lg:text-xl text-gray-600 mb-4">Full Stack Developer</p>
+          <motion.div
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.4 }}
+          >
+            <ResumeButton className="justify-center scale-90" />
+          </motion.div>
         </motion.div>
 
         <div className="space-y-4 lg:space-y-6">
