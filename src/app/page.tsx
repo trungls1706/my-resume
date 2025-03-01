@@ -20,11 +20,13 @@ export default function Home() {
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.6 }}
-        className={`w-full lg:w-2/3 overflow-y-auto p-4 lg:p-8 order-last lg:ml-[33.333333%] ${
+
+        className={`w-full lg:w-[75%] overflow-y-auto p-4 lg:p-6 order-last lg:ml-[25%] ${
           showDetails ? 'hidden lg:block' : 'block'
         }`}
       >
-        <div className="space-y-8 lg:space-y-12 max-w-3xl mx-auto">
+        <div 
+        className="space-y-8 lg:space-y-12 max-w-5xl mx-auto">
           {/* <Projects /> */}
           <Experience />
         </div>
