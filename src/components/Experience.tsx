@@ -14,23 +14,33 @@ const ExperienceItem = ({ year, company, position, location, description, isLast
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="relative">
-      <div className="flex gap-4">
+    <motion.div 
+      className="relative"
+      layout
+      transition={{
+        layout: { duration: 0.3, ease: "easeInOut" }
+      }}
+    >
+      <div className="flex gap-2">
         {/* Left side - Timeline */}
-        <div className="w-32 relative flex-shrink-0">
+        <div className="w-28 relative flex-shrink-0">
           <div className={`absolute right-0 w-0.5 bg-gray-300 top-0 ${isLast ? 'bottom-0' : '-bottom-12'}`} />
           <motion.button
             onClick={() => setIsExpanded(!isExpanded)}
             className="absolute right-[-12px] w-6 h-6 rounded-full bg-white border-2 border-teal-500 flex items-center justify-center cursor-pointer hover:bg-teal-50"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            transition={{ 
+              type: "spring", 
+              stiffness: 400, 
+              damping: 17 
+            }}
           >
             <motion.span
               animate={{ rotate: isExpanded ? 45 : 0 }}
               transition={{ 
                 type: "spring",
-                stiffness: 300,
+                stiffness: 200,
                 damping: 20
               }}
               className="text-teal-500 text-lg font-bold leading-none"
@@ -43,70 +53,69 @@ const ExperienceItem = ({ year, company, position, location, description, isLast
         </div>
 
         {/* Right side - Content */}
-        <div className="flex-grow pb-12">
+        <motion.div 
+          className="flex-grow pb-12 pr-4"
+          layout
+          transition={{
+            layout: { duration: 0.3, ease: "easeInOut" }
+          }}
+        >
           <motion.div 
-            className="cursor-pointer"
+            className="cursor-pointer group"
             onClick={() => setIsExpanded(!isExpanded)}
             whileHover={{ x: 2 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
           >
-            <h3 className="text-xl font-bold">{company}</h3>
-            <div className="mt-1">
-              <h4 className="text-lg font-semibold text-teal-600">{position}</h4>
-              <p className="text-sm text-gray-600">{location}</p>
+            <div className="flex items-baseline gap-3">
+              <h3 className="text-xl font-bold text-gray-800 group-hover:text-teal-600 transition-colors">{company}</h3>
+              <span className="text-sm text-gray-500 font-medium">{location}</span>
             </div>
+            <h4 className="text-lg font-semibold text-teal-600 mt-1">{position}</h4>
           </motion.div>
 
-          <AnimatePresence>
+          <AnimatePresence mode="wait">
             {isExpanded && (
               <motion.div
-                initial={{ 
-                  height: 0, 
-                  opacity: 0,
-                  y: -20
-                }}
-                animate={{ 
-                  height: "auto", 
-                  opacity: 1,
-                  y: 0
-                }}
-                exit={{ 
-                  height: 0, 
-                  opacity: 0,
-                  y: -20
-                }}
-                transition={{ 
-                  type: "spring",
-                  stiffness: 300,
-                  damping: 25,
-                  staggerChildren: 0.05
-                }}
-                className="overflow-hidden"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.2, ease: "easeInOut" }}
               >
-                <motion.div className="mt-4 space-y-2 text-gray-700">
-                  {description.map((desc, index) => (
-                    <motion.p 
-                      key={index}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: -20 }}
-                      transition={{ 
-                        type: "spring",
-                        stiffness: 300,
-                        damping: 25,
-                        delay: index * 0.1
-                      }}
-                    >
-                      {desc}
-                    </motion.p>
-                  ))}
+                <motion.div
+                  initial={{ height: 0 }}
+                  animate={{ height: "auto" }}
+                  exit={{ height: 0 }}
+                  transition={{
+                    duration: 0.3,
+                    ease: [0.4, 0, 0.2, 1]
+                  }}
+                  className="overflow-hidden"
+                >
+                  <div className="mt-4 space-y-3 text-gray-700 max-w-3xl">
+                    {description.map((desc, index) => (
+                      <motion.p 
+                        key={index}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
+                        transition={{ 
+                          duration: 0.2,
+                          delay: index * 0.05,
+                          ease: "easeOut"
+                        }}
+                        className="leading-relaxed"
+                      >
+                        {desc}
+                      </motion.p>
+                    ))}
+                  </div>
                 </motion.div>
               </motion.div>
             )}
           </AnimatePresence>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
