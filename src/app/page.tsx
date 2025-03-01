@@ -25,7 +25,7 @@ export default function Home() {
         }`}
       >
         <div className="space-y-8 lg:space-y-12 max-w-3xl mx-auto">
-          <Projects />
+          {/* <Projects /> */}
           <Experience />
         </div>
       </motion.div>
