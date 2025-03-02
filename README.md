@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Portfolio Website
 
-## Getting Started
+A modern, responsive portfolio website built with Next.js 14, TypeScript, and Tailwind CSS, featuring a clean design with dark mode support.
 
-First, run the development server:
+## 🚀 Features
 
+- **Modern Tech Stack**: Built with Next.js 14, TypeScript, and Tailwind CSS
+- **Responsive Design**: Fully responsive layout that works on all devices
+- **Dark Mode**: System-aware dark mode with manual toggle option
+- **Custom Fonts**: Uses Geist Sans and Geist Mono fonts for optimal readability
+- **Theme Provider**: Context-based theme management
+- **Clean UI**: Minimalist and professional design
+
+## 🛠️ Technologies
+
+- [Next.js 14](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [React Context](https://react.dev/reference/react/useContext)
+
+## 📦 Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/trungls1706/my-resume.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Navigate to the project directory:
+```bash
+cd portfolio
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Install dependencies:
+```bash
+yarn install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Run the development server:
+```bash
+yarn dev
+```
 
-## Learn More
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-To learn more about Next.js, take a look at the following resources:
+## 🔧 Configuration
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Environment Variables
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Create a `.env.local` file in the root directory and add any necessary environment variables:
 
-## Deploy on Vercel
+```env
+NEXT_PUBLIC_SITE_URL=your-site-url
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Customization
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Edit `src/app/globals.css` to modify global styles and theme variables
+- Update `src/app/layout.tsx` to change the base layout and metadata
+- Modify components in `src/components/` to customize individual sections
+
+## 📱 Components
+
+The project includes several key components:
+
+- `ThemeToggle`: Dark/Light mode switch
+- `ThemeProvider`: Context provider for theme management
+- Layout components for consistent page structure
+- Various UI components for portfolio sections
+
+## 🎨 Styling
+
+The project uses a combination of:
+- Tailwind CSS for utility-first styling
+- CSS Variables for theme colors and values
+- Custom components with consistent styling
+- Responsive design patterns
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📧 Contact
+
+Trung Le - [trungls1706@gmail.com](mailto:trungls1706@gmail.com)
+- Birthday: June 17, 1995
+
+Project Link: [https://github.com/trungls1706/my-resume](https://github.com/trungls1706/my-resume)

@@ -165,6 +165,13 @@ export const PersonalInfo = ({ showDetails }: PersonalInfoProps) => {
                 <span>📍</span>
                 <span>Ho Chi Minh, Vietnam</span>
               </motion.p>
+              <motion.p
+                whileHover={{ x: 10 }}
+                className="flex items-center gap-2 text-sm lg:text-base text-gray-600 dark:text-gray-400"
+              >
+                <span>🎂</span>
+                <span>17/06/1995</span>
+              </motion.p>
             </div>
           </motion.section>
         </div>
