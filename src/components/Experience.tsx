@@ -6,7 +6,11 @@ interface ExperienceItemProps {
   company: string;
   position: string;
   location: string;
-  description: string[];
+  description: {
+    project: string;
+    appDetails: string[];
+    responsibilities: string[];
+  }[];
   isLast: boolean;
 }
 
@@ -18,7 +22,7 @@ const ExperienceItem = ({
   description,
   isLast,
 }: ExperienceItemProps) => {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(true);
 
   return (
     <motion.div
@@ -30,7 +34,7 @@ const ExperienceItem = ({
     >
       <div className="flex gap-6">
         {/* Left side - Timeline */}
-        <div className="w-32 relative flex-shrink-0">
+        <div className="relative flex-shrink-0">
           <div
             className={`absolute right-0 w-[2px] bg-gradient-to-b from-sky-300 to-cyan-400 top-0 ${isLast ? 'bottom-0' : '-bottom-12'}`}
           />
@@ -71,7 +75,6 @@ const ExperienceItem = ({
         >
           <motion.div
             className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
-            onClick={() => setIsExpanded(!isExpanded)}
             whileHover={{ y: -2 }}
             transition={{ type: 'spring', stiffness: 400, damping: 17 }}
           >
@@ -105,23 +108,42 @@ const ExperienceItem = ({
                     }}
                     className="overflow-hidden"
                   >
-                    <div className="mt-6 space-y-4">
-                      {description.map((desc, index) => (
-                        <motion.div
-                          key={index}
-                          initial={{ opacity: 0, x: -20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          exit={{ opacity: 0, x: -20 }}
-                          transition={{
-                            duration: 0.3,
-                            delay: index * 0.1,
-                            ease: 'easeOut',
-                          }}
-                          className="flex gap-3 items-start"
-                        >
-                          <div className="w-2 h-2 rounded-full bg-sky-300 mt-2 flex-shrink-0" />
-                          <p className="text-gray-700 leading-relaxed font-medium">{desc}</p>
-                        </motion.div>
+                    <div className="mt-6 space-y-6">
+                      {description.map((item, idx) => (
+                        <div key={idx}>
+                          {/* Project Section */}
+                          <div className="space-y-3">
+                            <h5 className="text-lg font-bold text-sky-500">Project</h5>
+                            <div className="flex gap-3 items-start">
+                              <div className="w-2 h-2 rounded-full bg-sky-300 mt-2 flex-shrink-0" />
+                              <p className="text-gray-700 leading-relaxed font-medium">
+                                {item.project}
+                              </p>
+                            </div>
+                          </div>
+
+                          {/* App Details Section */}
+                          <div className="space-y-3 mt-6">
+                            <h5 className="text-lg font-bold text-sky-500">App Details</h5>
+                            {item.appDetails.map((detail, index) => (
+                              <div key={index} className="flex gap-3 items-start">
+                                <div className="w-2 h-2 rounded-full bg-sky-300 mt-2 flex-shrink-0" />
+                                <p className="text-gray-700 leading-relaxed font-medium">{detail}</p>
+                              </div>
+                            ))}
+                          </div>
+
+                          {/* Development Responsibilities Section */}
+                          <div className="space-y-3 mt-6">
+                            <h5 className="text-lg font-bold text-sky-500">Development Responsibilities</h5>
+                            {item.responsibilities.map((responsibility, index) => (
+                              <div key={index} className="flex gap-3 items-start">
+                                <div className="w-2 h-2 rounded-full bg-sky-300 mt-2 flex-shrink-0" />
+                                <p className="text-gray-700 leading-relaxed font-medium">{responsibility}</p>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
                       ))}
                     </div>
                   </motion.div>
@@ -135,23 +157,49 @@ const ExperienceItem = ({
   );
 };
 
-//viewChildren
 export const Experience = () => {
   const experiences = [
     {
-      year: '2018 - NOW',
-      company: 'GOOGLE',
-      position: 'Technical Architect',
-      // location: 'django villas',
-      description: ['sdasdasdasd', 'dasdasdasdas'],
+      year: '10/2024 - Present',
+      company: 'Haravan',
+      position: 'Software Specialist',
+      location: 'Ho Chi Minh',
+      description: [
+        {
+          project: 'POS (React JS)',
+          appDetails: [
+            'A retail POS system for Maison\'s stores, supporting core sales operations such as product scanning, payment processing (cash, card, QR code), order management, inventory tracking, and revenue reporting.',
+            'The system also includes features for managing promotions, generating sales receipts, handling refunds, and providing detailed sales analytics to assist in business decision-making.'
+          ],
+          responsibilities: [
+            'Maintain the app, fix bugs, and add new features.'
+          ]
+        }
+      ]
     },
     {
-      year: '2017 - 2018',
-      company: 'META',
-      position: 'Lead Engineer',
-      // location: 'django villas',
-      description: ['sdasdasdasd', 'dasdasdasdas'],
-    },
+      year: '06/2024 - Present',
+      company: 'Haravan',
+      position: 'Software Specialist',
+      location: 'Ho Chi Minh',
+      description: [
+        {
+          project: 'Self-checkout (React JS)',
+          appDetails: [
+            'Self-checkout offers time savings, convenience, improved information security, reduced staff workload, and a modern shopping experience for customers.'
+          ],
+          responsibilities: [
+            'Project structure setup: designed and implemented the foundational architecture for the project, ensuring scalability and maintainability.',
+            'Contribute ideas, improve technology, and enhance the user experience of the application.',
+            'Managed app data and state using Context API and handled data fetching by Axios.',
+            'Developed a styled app using Tailwind CSS.',
+            'Print Integration: Implemented seamless printing solutions, enabling users to print receipts and other necessary documents directly from the system.',
+            'RFID Integration: Replaced traditional bar code scanning with RFID technology, improving product scanning speed and accuracy.',
+            'Monitoring, analysis and reporting app via Sentry.'
+          ]
+        }
+      ]
+    }
   ];
 
   return (
@@ -164,7 +212,7 @@ export const Experience = () => {
       >
         EXPERIENCES
       </motion.h2>
-      <div className="pl-4">
+      <div>
         {experiences.map((exp, index) => (
           <ExperienceItem key={index} {...exp} isLast={index === experiences.length - 1} />
         ))}
