@@ -40,7 +40,7 @@ const ExperienceItem = ({
           />
           <motion.button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="absolute right-[-16px] w-8 h-8 rounded-full bg-white border-2 border-sky-300 flex items-center justify-center cursor-pointer hover:bg-sky-50 shadow-md"
+            className="absolute right-[-16px] w-8 h-8 rounded-full bg-white dark:bg-gray-800 border-2 border-sky-300 flex items-center justify-center cursor-pointer hover:bg-sky-50 dark:hover:bg-gray-700 shadow-md"
             whileHover={{ scale: 1.1, borderColor: '#7DD3FC' }}
             whileTap={{ scale: 0.95 }}
             transition={{
@@ -62,7 +62,7 @@ const ExperienceItem = ({
               +
             </motion.span>
           </motion.button>
-          <div className="text-sm font-semibold py-1 text-right pr-8 text-gray-600">{year}</div>
+          <div className="text-sm font-semibold py-1 text-right pr-8 text-gray-600 dark:text-gray-400">{year}</div>
         </div>
 
         {/* Right side - Content */}
@@ -74,7 +74,7 @@ const ExperienceItem = ({
           }}
         >
           <motion.div
-            className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
+            className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
             whileHover={{ y: -2 }}
             transition={{ type: 'spring', stiffness: 400, damping: 17 }}
           >
@@ -83,11 +83,11 @@ const ExperienceItem = ({
                 <h3 className="text-2xl font-bold bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent">
                   {company}
                 </h3>
-                <span className="text-sm text-gray-500 font-medium bg-gray-100 px-3 py-1 rounded-full">
+                <span className="text-sm text-gray-500 dark:text-gray-400 font-medium bg-gray-100 dark:bg-gray-700 px-3 py-1 rounded-full">
                   {location}
                 </span>
               </div>
-              <h4 className="text-lg font-semibold text-sky-500">{position}</h4>
+              <h4 className="text-lg font-semibold text-sky-500 dark:text-sky-400">{position}</h4>
             </div>
 
             <AnimatePresence mode="wait">
@@ -113,10 +113,10 @@ const ExperienceItem = ({
                         <div key={idx}>
                           {/* Project Section */}
                           <div className="space-y-3">
-                            <h5 className="text-lg font-bold text-sky-500">Project</h5>
+                            <h5 className="text-lg font-bold text-sky-500 dark:text-sky-400">Project</h5>
                             <div className="flex gap-3 items-start">
-                              <div className="w-2 h-2 rounded-full bg-sky-300 mt-2 flex-shrink-0" />
-                              <p className="text-gray-700 leading-relaxed font-medium">
+                              <div className="w-2 h-2 rounded-full bg-sky-300 dark:bg-sky-500 mt-2 flex-shrink-0" />
+                              <p className="text-gray-700 dark:text-gray-300 leading-relaxed font-medium">
                                 {item.project}
                               </p>
                             </div>
@@ -124,22 +124,22 @@ const ExperienceItem = ({
 
                           {/* App Details Section */}
                           <div className="space-y-3 mt-6">
-                            <h5 className="text-lg font-bold text-sky-500">App Details</h5>
+                            <h5 className="text-lg font-bold text-sky-500 dark:text-sky-400">App Details</h5>
                             {item.appDetails.map((detail, index) => (
                               <div key={index} className="flex gap-3 items-start">
-                                <div className="w-2 h-2 rounded-full bg-sky-300 mt-2 flex-shrink-0" />
-                                <p className="text-gray-700 leading-relaxed font-medium">{detail}</p>
+                                <div className="w-2 h-2 rounded-full bg-sky-300 dark:bg-sky-500 mt-2 flex-shrink-0" />
+                                <p className="text-gray-700 dark:text-gray-300 leading-relaxed font-medium">{detail}</p>
                               </div>
                             ))}
                           </div>
 
                           {/* Development Responsibilities Section */}
                           <div className="space-y-3 mt-6">
-                            <h5 className="text-lg font-bold text-sky-500">Development Responsibilities</h5>
+                            <h5 className="text-lg font-bold text-sky-500 dark:text-sky-400">Development Responsibilities</h5>
                             {item.responsibilities.map((responsibility, index) => (
                               <div key={index} className="flex gap-3 items-start">
-                                <div className="w-2 h-2 rounded-full bg-sky-300 mt-2 flex-shrink-0" />
-                                <p className="text-gray-700 leading-relaxed font-medium">{responsibility}</p>
+                                <div className="w-2 h-2 rounded-full bg-sky-300 dark:bg-sky-500 mt-2 flex-shrink-0" />
+                                <p className="text-gray-700 dark:text-gray-300 leading-relaxed font-medium">{responsibility}</p>
                               </div>
                             ))}
                           </div>
@@ -203,16 +203,16 @@ export const Experience = () => {
   ];
 
   return (
-    <section>
+    <section className="dark:bg-gray-900">
       <motion.h2
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.2 }}
-        className="text-4xl font-bold mb-12 bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent"
+        className="text-4xl font-bold mb-8 bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent"
       >
         EXPERIENCES
       </motion.h2>
-      <div>
+      <div className="-mt-4">
         {experiences.map((exp, index) => (
           <ExperienceItem key={index} {...exp} isLast={index === experiences.length - 1} />
         ))}

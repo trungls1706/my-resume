@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 
 interface ResumeButtonProps {
@@ -24,7 +26,7 @@ export const ResumeButton = ({ className = '' }: ResumeButtonProps) => {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={handleViewPDF}
-        className="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-full hover:bg-gray-200 transition-colors flex items-center gap-2 text-sm"
+        className="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors flex items-center gap-2 text-sm"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +48,7 @@ export const ResumeButton = ({ className = '' }: ResumeButtonProps) => {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={handleDownloadPDF}
-        className="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-full hover:bg-gray-200 transition-colors flex items-center gap-2 text-sm"
+        className="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors flex items-center gap-2 text-sm"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
