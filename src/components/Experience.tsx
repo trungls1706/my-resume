@@ -36,11 +36,13 @@ const ExperienceItem = ({
         {/* Left side - Timeline */}
         <div className="relative flex-shrink-0">
           <div
-            className={`absolute right-0 w-[2px] bg-gradient-to-b from-sky-300 to-cyan-400 top-0 ${isLast ? 'bottom-0' : '-bottom-12'}`}
+            className={`absolute right-0 w-[4px] bg-gradient-to-b from-sky-400 via-cyan-400 to-blue-500 top-0 ${
+              isLast ? 'bottom-0' : '-bottom-12'
+            } shadow-[0_0_8px_rgba(14,165,233,0.5)] rounded-full`}
           />
           <motion.button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="absolute right-[-16px] w-8 h-8 rounded-full bg-white dark:bg-gray-800 border-2 border-sky-300 flex items-center justify-center cursor-pointer hover:bg-sky-50 dark:hover:bg-gray-700 shadow-md"
+            className="absolute right-[-18px] w-9 h-9 rounded-full bg-white dark:bg-gray-800 border-[3px] border-sky-400 flex items-center justify-center cursor-pointer hover:bg-sky-50 dark:hover:bg-gray-700 shadow-lg hover:shadow-sky-200 dark:hover:shadow-sky-900 transition-all"
             whileHover={{ scale: 1.1, borderColor: '#7DD3FC' }}
             whileTap={{ scale: 0.95 }}
             transition={{
@@ -62,7 +64,11 @@ const ExperienceItem = ({
               +
             </motion.span>
           </motion.button>
-          <div className="text-sm font-semibold py-1 text-right pr-8 text-gray-600 dark:text-gray-400">{year}</div>
+          <div className="text-sm font-bold py-2 px-4 text-right pr-8 rounded-full bg-gradient-to-r from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/30 border border-sky-100 dark:border-sky-800 shadow-sm hover:shadow-md transition-all">
+            <span className="bg-gradient-to-r from-sky-500 to-cyan-500 bg-clip-text text-transparent">
+              {year}
+            </span>
+          </div>
         </div>
 
         {/* Right side - Content */}
@@ -113,33 +119,37 @@ const ExperienceItem = ({
                         <div key={idx}>
                           {/* Project Section */}
                           <div className="space-y-3">
-                            <h5 className="text-lg font-bold text-sky-500 dark:text-sky-400">Project</h5>
-                            <div className="flex gap-3 items-start">
-                              <div className="w-2 h-2 rounded-full bg-sky-300 dark:bg-sky-500 mt-2 flex-shrink-0" />
-                              <p className="text-gray-700 dark:text-gray-300 leading-relaxed font-medium">
-                                {item.project}
-                              </p>
-                            </div>
+                            <h5 className="text-lg font-bold text-sky-500 dark:text-sky-400">
+                              Project : {item.project}
+                            </h5>
                           </div>
 
                           {/* App Details Section */}
                           <div className="space-y-3 mt-6">
-                            <h5 className="text-lg font-bold text-sky-500 dark:text-sky-400">App Details</h5>
+                            <h5 className="text-lg font-bold text-sky-500 dark:text-sky-400">
+                              App Details
+                            </h5>
                             {item.appDetails.map((detail, index) => (
                               <div key={index} className="flex gap-3 items-start">
                                 <div className="w-2 h-2 rounded-full bg-sky-300 dark:bg-sky-500 mt-2 flex-shrink-0" />
-                                <p className="text-gray-700 dark:text-gray-300 leading-relaxed font-medium">{detail}</p>
+                                <p className="text-gray-700 dark:text-gray-300 leading-relaxed font-medium">
+                                  {detail}
+                                </p>
                               </div>
                             ))}
                           </div>
 
                           {/* Development Responsibilities Section */}
                           <div className="space-y-3 mt-6">
-                            <h5 className="text-lg font-bold text-sky-500 dark:text-sky-400">Development Responsibilities</h5>
+                            <h5 className="text-lg font-bold text-sky-500 dark:text-sky-400">
+                              Development Responsibilities
+                            </h5>
                             {item.responsibilities.map((responsibility, index) => (
                               <div key={index} className="flex gap-3 items-start">
                                 <div className="w-2 h-2 rounded-full bg-sky-300 dark:bg-sky-500 mt-2 flex-shrink-0" />
-                                <p className="text-gray-700 dark:text-gray-300 leading-relaxed font-medium">{responsibility}</p>
+                                <p className="text-gray-700 dark:text-gray-300 leading-relaxed font-medium">
+                                  {responsibility}
+                                </p>
                               </div>
                             ))}
                           </div>
@@ -168,14 +178,12 @@ export const Experience = () => {
         {
           project: 'POS (React JS)',
           appDetails: [
-            'A retail POS system for Maison\'s stores, supporting core sales operations such as product scanning, payment processing (cash, card, QR code), order management, inventory tracking, and revenue reporting.',
-            'The system also includes features for managing promotions, generating sales receipts, handling refunds, and providing detailed sales analytics to assist in business decision-making.'
+            "A retail POS system for Maison's stores, supporting core sales operations such as product scanning, payment processing (cash, card, QR code), order management, inventory tracking, and revenue reporting.",
+            'The system also includes features for managing promotions, generating sales receipts, handling refunds, and providing detailed sales analytics to assist in business decision-making.',
           ],
-          responsibilities: [
-            'Maintain the app, fix bugs, and add new features.'
-          ]
-        }
-      ]
+          responsibilities: ['Maintain the app, fix bugs, and add new features.'],
+        },
+      ],
     },
     {
       year: '06/2024 - Present',
@@ -186,7 +194,7 @@ export const Experience = () => {
         {
           project: 'Self-checkout (React JS)',
           appDetails: [
-            'Self-checkout offers time savings, convenience, improved information security, reduced staff workload, and a modern shopping experience for customers.'
+            'Self-checkout offers time savings, convenience, improved information security, reduced staff workload, and a modern shopping experience for customers.',
           ],
           responsibilities: [
             'Project structure setup: designed and implemented the foundational architecture for the project, ensuring scalability and maintainability.',
@@ -195,11 +203,11 @@ export const Experience = () => {
             'Developed a styled app using Tailwind CSS.',
             'Print Integration: Implemented seamless printing solutions, enabling users to print receipts and other necessary documents directly from the system.',
             'RFID Integration: Replaced traditional bar code scanning with RFID technology, improving product scanning speed and accuracy.',
-            'Monitoring, analysis and reporting app via Sentry.'
-          ]
-        }
-      ]
-    }
+            'Monitoring, analysis and reporting app via Sentry.',
+          ],
+        },
+      ],
+    },
   ];
 
   return (
