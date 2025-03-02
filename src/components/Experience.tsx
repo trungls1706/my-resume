@@ -38,13 +38,16 @@ const ExperienceItem = ({
           <div
             className={`absolute right-0 w-[4px] bg-gradient-to-b from-sky-400 via-cyan-400 to-blue-500 top-0 ${
               isLast ? 'bottom-0' : '-bottom-12'
-            } shadow-[0_0_8px_rgba(14,165,233,0.5)] rounded-full`}
+            } shadow-[0_0_12px_rgba(14,165,233,0.6)] rounded-full`}
           />
           <motion.button
             onClick={() => setIsExpanded(!isExpanded)}
             className="absolute right-[-18px] w-9 h-9 rounded-full bg-white dark:bg-gray-800 border-[3px] border-sky-400 flex items-center justify-center cursor-pointer hover:bg-sky-50 dark:hover:bg-gray-700 shadow-lg hover:shadow-sky-200 dark:hover:shadow-sky-900 transition-all"
-            whileHover={{ scale: 1.1, borderColor: '#7DD3FC' }}
-            whileTap={{ scale: 0.95 }}
+            whileHover={{ 
+              scale: 1.02,
+              borderColor: '#38BDF8',
+            }}
+            whileTap={{ scale: 0.98 }}
             transition={{
               type: 'spring',
               stiffness: 400,
@@ -52,22 +55,23 @@ const ExperienceItem = ({
             }}
           >
             <motion.span
-              animate={{ rotate: isExpanded ? 45 : 0 }}
+              animate={{ 
+                rotate: isExpanded ? 45 : 0,
+                color: isExpanded ? '#0EA5E9' : '#38BDF8'
+              }}
               transition={{
                 type: 'spring',
                 stiffness: 200,
                 damping: 20,
               }}
-              className="text-sky-400 text-xl font-bold leading-none"
+              className="text-2xl font-bold leading-none bg-gradient-to-r from-sky-500 to-cyan-500 bg-clip-text text-transparent"
               style={{ marginTop: '-1px' }}
             >
               +
             </motion.span>
           </motion.button>
-          <div className="text-sm font-bold py-2 px-4 text-right pr-8 rounded-full bg-gradient-to-r from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/30 border border-sky-100 dark:border-sky-800 shadow-sm hover:shadow-md transition-all">
-            <span className="bg-gradient-to-r from-sky-500 to-cyan-500 bg-clip-text text-transparent">
-              {year}
-            </span>
+          <div className="text-sm font-semibold py-1 text-right pr-8 text-gray-600 dark:text-gray-400">
+            {year}
           </div>
         </div>
 
@@ -80,8 +84,8 @@ const ExperienceItem = ({
           }}
         >
           <motion.div
-            className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
-            whileHover={{ y: -2 }}
+            className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+            whileHover={{ y: -2, scale: 1.01 }}
             transition={{ type: 'spring', stiffness: 400, damping: 17 }}
           >
             <div className="flex flex-col gap-2">
