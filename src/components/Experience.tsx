@@ -214,6 +214,101 @@ export const Experience = () => {
         },
       ],
     },
+    {
+      year: '08/2023 - Present',
+      company: 'Haravan',
+      position: 'Software Specialist',
+      location: 'Ho Chi Minh',
+      description: [
+        {
+          project: 'Loyalty PepsiCo (Zalo Mini App)',
+          appDetails: [
+            'Loyalty application designed exclusively for distributors and agents of PepsiCo Foods. Its purpose is to help wholesale users manage information about revenue, reward points, and receive attractive gifts from PepsiCo Foods.',
+          ],
+          responsibilities: [
+            'Project structure setup: designed and implemented the foundational architecture for the project, ensuring scalability and maintainability.',
+            'Develop the application using open-source code, API, and documentation from Zalo.',
+            'Managed app data and state using Zustand and handled data fetching by Axios',
+            'Developed a styled app using Tailwind CSS.',
+            'Generate ideas, design, and create experiences based on customer requirements.',
+            'Integrate auto build and auto deploy with CI/CD.',
+          ],
+        },
+      ],
+    },
+    {
+      year: '11/2018 - Present',
+      company: 'Haravan',
+      position: 'Software Specialist',
+      location: 'Ho Chi Minh',
+      description: [
+        {
+          project: 'Giacmosuaviet, AeonEshop',
+          appDetails: ['E-Commerce app (React Native)'],
+          responsibilities: [
+            'Migrated source code from React Native CLI to Expo CLI, streamlining development workflows.',
+            'Managed app data and state using API integration, AsyncStorage, Redux, and Redux-Saga.',
+            'Integrated third-party libraries such as Facebook, Google, Code Push, and React-Native-Insider.',
+            'Enhanced app features with Firebase Analytics, React-Native-Insider, and Sentry for tracking and crash reporting.',
+            'Ensured effective communication and user notifications through Firebase and React-Native-Insider.',
+            'Deployed apps using native build tools, ensuring a smooth user experience.',
+          ],
+        },
+        {
+          project: 'Guardian Vietnam, CoupleTx, On Ways, The Cosmo, Sofia',
+          appDetails: ['E-Commerce app (React Native)'],
+          responsibilities: [
+            'Project structure setup: designed and implemented the foundational architecture for the project, ensuring scalability and maintainability.',
+            'Led the development and optimization of e-commerce platforms.',
+            'Collaborated with cross-functional teams to deploy tailored e-commerce applications.',
+            'Upgraded applications and transitioned source code from React Native CLI to Expo CLI for enhanced development agility.',
+            'Managed app data and state using fetch API, AsyncStorage, Redux, and Redux Toolkit.',
+            'Applied routing with React Navigation and implemented crash reporting with Sentry.',
+            'Managed notifications through Expo Notifications and built/deployed apps using Expo CLI',
+            'Monitoring, analysis and reporting app via Firebase Analytics, Sentry.',
+            'Integrate auto build and auto deploy with CI/CD.',
+          ],
+        },
+      ],
+    },
+    {
+      year: '05/2018 - 10/2018',
+      company: 'Haravan',
+      position: 'Software Specialist',
+      location: 'Ho Chi Minh',
+      description: [
+        {
+          project: 'HaraRetail',
+          appDetails: ['Chain Store Management Software'],
+          responsibilities: [
+            'Front-end development based on design documentation.',
+            'Supported app testing and collaborated with teammates.',
+            "Upgraded the application according to the Product Owner's specifications.",
+            'Migrated source code from React Native CLI to Expo CLI for improved development efficiency.',
+            'Managed app data and state using API integration, AsyncStorage, Redux, and Redux-Saga.',
+            'Implemented routing with React Navigation and React Native Router Flux.',
+            'Integrated Firebase Analytics for tracking and Sentry for crash reporting.',
+          ],
+        },
+      ],
+    },
+    {
+      year: '02/2018 - 04/2018',
+      company: 'Haravan',
+      position: 'Internship',
+      location: 'Ho Chi Minh',
+      description: [
+        {
+          project: 'Internship',
+          appDetails: ['Training and Learning'],
+          responsibilities: [
+            'Gained proficiency in JavaScript, ES6, and React Native API',
+            'Learned React Native components, API integration, debugging, and app deployment.',
+            'Studied and implemented efficient source code structures.',
+          ],
+        },
+      ],
+    },
   ];
 
   return (
