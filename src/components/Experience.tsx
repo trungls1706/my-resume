@@ -70,8 +70,10 @@ const ExperienceItem = ({
               +
             </motion.span>
           </motion.button>
-          <div className="text-sm font-semibold py-1 text-right pr-8 text-gray-600 dark:text-gray-400">
-            {year}
+          <div className="text-base font-bold py-1.5 px-4 text-right pr-8 rounded-lg bg-gradient-to-r from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/30 border border-sky-200 dark:border-sky-700/50">
+            <span className="bg-gradient-to-r from-sky-600 via-cyan-500 to-blue-500 dark:from-sky-400 dark:via-cyan-300 dark:to-blue-300 bg-clip-text text-transparent drop-shadow-sm">
+              {year}
+            </span>
           </div>
         </div>
 
