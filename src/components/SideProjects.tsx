@@ -34,17 +34,17 @@ const ProjectItem = ({
         layout: { duration: 0.3, ease: 'easeInOut' },
       }}
     >
-      <div className="flex gap-8">
+      <div className="flex flex-col sm:flex-row gap-4 sm:gap-8">
         {/* Left side - Timeline */}
-        <div className="relative flex-shrink-0 w-48">
+        <div className="relative flex-shrink-0 w-full sm:w-48">
           <div
             className={`absolute right-0 w-1 bg-gradient-to-b from-emerald-400 via-green-400 to-teal-500 top-0 ${
               isLast ? 'bottom-0' : '-bottom-12'
-            } shadow-[0_0_12px_rgba(52,211,153,0.6)] rounded-full`}
+            } shadow-[0_0_12px_rgba(52,211,153,0.6)] rounded-full hidden sm:block`}
           />
           <motion.button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="absolute right-[-18px] w-9 h-9 rounded-full bg-white dark:bg-gray-800 border-[3px] border-emerald-400 flex items-center justify-center cursor-pointer hover:bg-emerald-50 dark:hover:bg-gray-700 shadow-lg hover:shadow-emerald-200 dark:hover:shadow-emerald-900 transition-all"
+            className="absolute right-[-18px] w-9 h-9 rounded-full bg-white dark:bg-gray-800 border-[3px] border-emerald-400 flex items-center justify-center cursor-pointer hover:bg-emerald-50 dark:hover:bg-gray-700 shadow-lg hover:shadow-emerald-200 dark:hover:shadow-emerald-900 transition-all hidden sm:flex"
             whileHover={{ 
               scale: 1.02,
               borderColor: '#34D399',
@@ -72,7 +72,7 @@ const ProjectItem = ({
               +
             </motion.span>
           </motion.button>
-          <div className="text-base font-bold py-1.5 px-4 text-right pr-8 rounded-lg bg-gradient-to-r from-emerald-50 to-green-50 dark:from-emerald-900/30 dark:to-green-900/30 border border-emerald-200 dark:border-emerald-700/50">
+          <div className="text-base font-bold py-1.5 px-4 text-left sm:text-right sm:pr-8 rounded-lg bg-gradient-to-r from-emerald-50 to-green-50 dark:from-emerald-900/30 dark:to-green-900/30 border border-emerald-200 dark:border-emerald-700/50 mb-4 sm:mb-0">
             <span className="bg-gradient-to-r from-emerald-600 via-green-500 to-teal-500 dark:from-emerald-400 dark:via-green-300 dark:to-teal-300 bg-clip-text text-transparent drop-shadow-sm">
               {year}
             </span>
@@ -81,30 +81,30 @@ const ProjectItem = ({
 
         {/* Right side - Content */}
         <motion.div
-          className="flex-grow pb-12"
+          className="flex-grow pb-8 sm:pb-12"
           layout
           transition={{
             layout: { duration: 0.3, ease: 'easeInOut' },
           }}
         >
           <motion.div
-            className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+            className="bg-white dark:bg-gray-800 rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
             whileHover={{ y: -2, scale: 1.01 }}
             transition={{ type: 'spring', stiffness: 400, damping: 17 }}
           >
             <div className="flex flex-col gap-2">
-              <div className="flex items-center justify-between">
-                <h3 className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-green-400 bg-clip-text text-transparent">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0">
+                <h3 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-emerald-400 to-green-400 bg-clip-text text-transparent">
                   {title}
                 </h3>
-                <span className="text-sm text-gray-500 dark:text-gray-400 font-medium bg-gray-100 dark:bg-gray-700 px-3 py-1 rounded-full">
+                <span className="text-sm text-gray-500 dark:text-gray-400 font-medium bg-gray-100 dark:bg-gray-700 px-3 py-1 rounded-full self-start sm:self-auto">
                   {technologies}
                 </span>
               </div>
               
               {/* Links Section */}
               {links && (
-                <div className="flex gap-4 mt-2">
+                <div className="flex flex-wrap gap-4 mt-2">
                   {links.web && (
                     <a
                       href={links.web}
@@ -157,16 +157,16 @@ const ProjectItem = ({
                     }}
                     className="overflow-hidden"
                   >
-                    <div className="mt-6 space-y-6">
+                    <div className="mt-4 sm:mt-6 space-y-4 sm:space-y-6">
                       {/* App Details Section */}
-                      <div className="space-y-3">
-                        <h5 className="text-lg font-bold text-emerald-500 dark:text-emerald-400">
+                      <div className="space-y-2 sm:space-y-3">
+                        <h5 className="text-base sm:text-lg font-bold text-emerald-500 dark:text-emerald-400">
                           App Details
                         </h5>
                         {appDetails.map((detail, index) => (
-                          <div key={index} className="flex gap-3 items-start">
+                          <div key={index} className="flex gap-2 sm:gap-3 items-start">
                             <div className="w-2 h-2 rounded-full bg-emerald-300 dark:bg-emerald-500 mt-2 flex-shrink-0" />
-                            <p className="text-gray-700 dark:text-gray-300 leading-relaxed font-medium">
+                            <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed font-medium">
                               {detail}
                             </p>
                           </div>
@@ -174,14 +174,14 @@ const ProjectItem = ({
                       </div>
 
                       {/* Development Responsibilities Section */}
-                      <div className="space-y-3">
-                        <h5 className="text-lg font-bold text-emerald-500 dark:text-emerald-400">
+                      <div className="space-y-2 sm:space-y-3">
+                        <h5 className="text-base sm:text-lg font-bold text-emerald-500 dark:text-emerald-400">
                           Development Responsibilities
                         </h5>
                         {responsibilities.map((responsibility, index) => (
-                          <div key={index} className="flex gap-3 items-start">
+                          <div key={index} className="flex gap-2 sm:gap-3 items-start">
                             <div className="w-2 h-2 rounded-full bg-emerald-300 dark:bg-emerald-500 mt-2 flex-shrink-0" />
-                            <p className="text-gray-700 dark:text-gray-300 leading-relaxed font-medium">
+                            <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed font-medium">
                               {responsibility}
                             </p>
                           </div>
