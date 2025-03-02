@@ -5,7 +5,8 @@ import { motion } from 'framer-motion';
 import { MobileMenuButton } from '@/components/MobileMenuButton';
 import { PersonalInfo } from '@/components/PersonalInfo';
 import { Experience } from '@/components/Experience';
-
+import { SideProjects } from '@/components/SideProjects';
+import { Education } from '@/components/Education';
 export default function Home() {
   const [showDetails, setShowDetails] = useState(true);
 
@@ -25,6 +26,8 @@ export default function Home() {
       >
         <div className="space-y-8 lg:space-y-12 w-full">
           <Experience />
+          <SideProjects />
+          <Education />
         </div>
       </motion.div>
     </div>

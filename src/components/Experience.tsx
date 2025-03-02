@@ -32,11 +32,11 @@ const ExperienceItem = ({
         layout: { duration: 0.3, ease: 'easeInOut' },
       }}
     >
-      <div className="flex gap-6">
+      <div className="flex gap-8">
         {/* Left side - Timeline */}
-        <div className="relative flex-shrink-0">
+        <div className="relative flex-shrink-0 w-48">
           <div
-            className={`absolute right-0 w-[4px] bg-gradient-to-b from-sky-400 via-cyan-400 to-blue-500 top-0 ${
+            className={`absolute right-0 w-1 bg-gradient-to-b from-sky-400 via-cyan-400 to-blue-500 top-0 ${
               isLast ? 'bottom-0' : '-bottom-12'
             } shadow-[0_0_12px_rgba(14,165,233,0.6)] rounded-full`}
           />
