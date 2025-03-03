@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 interface ProjectItemProps {
   year: string;
   title: string;
-  technologies: string;
+  location: string;
   appDetails: string[];
   responsibilities: string[];
   links?: {
@@ -18,7 +18,7 @@ interface ProjectItemProps {
 const ProjectItem = ({
   year,
   title,
-  technologies,
+  location,
   appDetails,
   responsibilities,
   links,
@@ -98,7 +98,7 @@ const ProjectItem = ({
                   {title}
                 </h3>
                 <span className="text-sm text-gray-500 dark:text-gray-400 font-medium bg-gray-100 dark:bg-gray-700 px-3 py-1 rounded-full self-start sm:self-auto">
-                  {technologies}
+                  {location}
                 </span>
               </div>
               
@@ -204,7 +204,7 @@ export const SideProjects = () => {
     {
       year: '10/2023 - Present',
       title: 'Betta Market',
-      technologies: 'React Native',
+      location: 'Ho Chi Minh',
       appDetails: [
         'Community platform for fish enthusiasts, featuring shop, auction, and online competition functionalities.',
       ],
