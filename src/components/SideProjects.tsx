@@ -132,7 +132,7 @@ const ProjectItem = ({
                       rel="noopener noreferrer"
                       className="text-emerald-500 hover:text-emerald-600 dark:text-emerald-400 dark:hover:text-emerald-300 transition-colors"
                     >
-                      🤖 Android
+                      📱 Android
                     </a>
                   )}
                 </div>

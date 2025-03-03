@@ -101,7 +101,7 @@ export const PersonalInfo = ({ showDetails }: PersonalInfoProps) => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.5 }}
           >
-            <h2 className="text-xl lg:text-2xl font-bold mb-3 lg:mb-4 text-gray-900 dark:text-white">
+            <h2 className="text-xl lg:text-2xl font-bold mb-3 lg:mb-4 text-gray-900 dark:text-white cursor-pointer hover:opacity-80 transition-opacity">
               About Me
             </h2>
             <p className="text-gray-600 dark:text-gray-400 text-sm lg:text-base">
@@ -115,7 +115,7 @@ export const PersonalInfo = ({ showDetails }: PersonalInfoProps) => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.7 }}
           >
-            <h2 className="text-xl lg:text-2xl font-bold mb-3 lg:mb-4 text-gray-900 dark:text-white">
+            <h2 className="text-xl lg:text-2xl font-bold mb-3 lg:mb-4 text-gray-900 dark:text-white cursor-pointer hover:opacity-80 transition-opacity">
               Skills
             </h2>
             <div className="flex flex-wrap gap-2">
@@ -140,7 +140,7 @@ export const PersonalInfo = ({ showDetails }: PersonalInfoProps) => {
             transition={{ delay: 0.9 }}
             className="mb-6 lg:mb-0"
           >
-            <h2 className="text-xl lg:text-2xl font-bold mb-3 lg:mb-4 text-gray-900 dark:text-white">
+            <h2 className="text-xl lg:text-2xl font-bold mb-3 lg:mb-4 text-gray-900 dark:text-white cursor-pointer hover:opacity-80 transition-opacity">
               Contact
             </h2>
             <div className="space-y-2">

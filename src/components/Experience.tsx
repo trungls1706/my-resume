@@ -182,7 +182,7 @@ export const Experience = () => {
       location: 'Ho Chi Minh',
       description: [
         {
-          project: 'POS (React JS)',
+          project: 'MAISON - POS (React JS)',
           appDetails: [
             "A retail POS system for Maison's stores, supporting core sales operations such as product scanning, payment processing (cash, card, QR code), order management, inventory tracking, and revenue reporting.",
             'The system also includes features for managing promotions, generating sales receipts, handling refunds, and providing detailed sales analytics to assist in business decision-making.',
@@ -198,7 +198,7 @@ export const Experience = () => {
       location: 'Ho Chi Minh',
       description: [
         {
-          project: 'Self Checkout (React JS)',
+          project: 'MAISON - Self Checkout (React JS)',
           appDetails: [
             'Self Checkout offers time savings, convenience, improved information security, reduced staff workload, and a modern shopping experience for customers.',
           ],
@@ -215,7 +215,7 @@ export const Experience = () => {
       ],
     },
     {
-      year: '08/2023 - Present',
+      year: '08/2023 - 10/2023',
       company: 'Haravan',
       position: 'Software Specialist',
       location: 'Ho Chi Minh',
@@ -237,7 +237,7 @@ export const Experience = () => {
       ],
     },
     {
-      year: '11/2018 - Present',
+      year: '11/2018 - 12/2023',
       company: 'Haravan',
       position: 'Software Specialist',
       location: 'Ho Chi Minh',
