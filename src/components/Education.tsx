@@ -38,7 +38,7 @@ const EducationItem = ({
           />
           <motion.button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="absolute right-[-18px] w-9 h-9 rounded-full bg-white dark:bg-gray-800 border-[3px] border-amber-400 flex items-center justify-center cursor-pointer hover:bg-amber-50 dark:hover:bg-gray-700 shadow-lg hover:shadow-amber-200 dark:hover:shadow-amber-900 transition-all hidden sm:flex"
+            className="absolute right-[-15px] w-9 h-9 rounded-full bg-white dark:bg-gray-800 border-[3px] border-amber-400 flex items-center justify-center cursor-pointer hover:bg-amber-50 dark:hover:bg-gray-700 shadow-lg hover:shadow-amber-200 dark:hover:shadow-amber-900 transition-all hidden sm:flex"
             whileHover={{ 
               scale: 1.02,
               borderColor: '#FBBF24',

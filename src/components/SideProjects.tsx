@@ -44,7 +44,7 @@ const ProjectItem = ({
           />
           <motion.button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="absolute right-[-18px] w-9 h-9 rounded-full bg-white dark:bg-gray-800 border-[3px] border-emerald-400 flex items-center justify-center cursor-pointer hover:bg-emerald-50 dark:hover:bg-gray-700 shadow-lg hover:shadow-emerald-200 dark:hover:shadow-emerald-900 transition-all hidden sm:flex"
+            className="absolute right-[-15px] w-9 h-9 rounded-full bg-white dark:bg-gray-800 border-[3px] border-emerald-400 flex items-center justify-center cursor-pointer hover:bg-emerald-50 dark:hover:bg-gray-700 shadow-lg hover:shadow-emerald-200 dark:hover:shadow-emerald-900 transition-all hidden sm:flex"
             whileHover={{ 
               scale: 1.02,
               borderColor: '#34D399',

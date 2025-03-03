@@ -42,7 +42,7 @@ const ExperienceItem = ({
           />
           <motion.button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="absolute right-[-18px] w-9 h-9 rounded-full bg-white dark:bg-gray-800 border-[3px] border-sky-400 flex items-center justify-center cursor-pointer hover:bg-sky-50 dark:hover:bg-gray-700 shadow-lg hover:shadow-sky-200 dark:hover:shadow-sky-900 transition-all hidden sm:flex"
+            className="absolute right-[-15px] w-9 h-9 rounded-full bg-white dark:bg-gray-800 border-[3px] border-sky-400 flex items-center justify-center cursor-pointer hover:bg-sky-50 dark:hover:bg-gray-700 shadow-lg hover:shadow-sky-200 dark:hover:shadow-sky-900 transition-all hidden sm:flex"
             whileHover={{ 
               scale: 1.02,
               borderColor: '#38BDF8',
