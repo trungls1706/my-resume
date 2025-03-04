@@ -12,10 +12,11 @@
     "git": "git add . && git commit -m 'add' && git push"
   },
   "engines": {
-  "node": "20.x",
-  "yarn": ">=1.22.0"
+    "node": "20.x",
+    "yarn": ">=1.22.0"
   },
   "dependencies": {
+    "@vercel/speed-insights": "^1.2.0",
     "framer-motion": "^10.16.4",
     "next": "15.1.7",
     "react": "^19.0.0",
