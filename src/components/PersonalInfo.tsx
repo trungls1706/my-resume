@@ -105,7 +105,7 @@ export const PersonalInfo = ({ showDetails }: PersonalInfoProps) => {
             </h2>
             <p className="text-gray-600 dark:text-gray-400 text-sm lg:text-base">
               Passionate Frontend Developer with 5+ years of experience in building web and mobile
-              applications. Specialized in React, React Native, React Js and modern frontend technologies.
+              applications. Specialized in React, React Native, and modern frontend technologies.
             </p>
           </motion.section>
 
