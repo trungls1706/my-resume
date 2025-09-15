@@ -206,7 +206,7 @@ export const SideProjects = () => {
       title: 'Mimosa TEK',
       location: 'Ho Chi Minh',
       appDetails: [
-        'Community platform for fish enthusiasts, featuring shop, auction, and online competition functionalities.',
+        'A smart farming app that helps farmers manage crops and track cultivation cycles efficiently.',
       ],
       responsibilities: [
         'Developed and integrated new features',
