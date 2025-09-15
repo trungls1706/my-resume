@@ -235,7 +235,7 @@ export const Experience = () => {
       location: 'Ho Chi Minh',
       description: [
         {
-          project: 'MAISON - POS MOBILE (React JS)',
+          project: 'MAISON - POS mobile (React JS)',
           appDetails: [
             'A lightweight mobile version of the POS system designed for creating draft orders quickly and conveniently.',
             'Focused on essential features such as product selection, customer information entry, and draft order management, optimized for mobile usage.',
@@ -259,7 +259,7 @@ export const Experience = () => {
       location: 'Ho Chi Minh',
       description: [
         {
-          project: 'MAISON - POS DESKTOP (React JS)',
+          project: 'MAISON - POS desktop (React JS)',
           appDetails: [
             "A retail POS system for Maison's stores, supporting core sales operations such as product scanning, payment processing (cash, card, QR code), order management, inventory tracking, and revenue reporting.",
             'The system also includes features for managing promotions, generating sales receipts, handling refunds, and providing detailed sales analytics to assist in business decision-making.',
