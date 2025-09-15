@@ -45,7 +45,7 @@ const ProjectItem = ({
           <motion.button
             onClick={() => setIsExpanded(!isExpanded)}
             className="absolute right-[-15px] w-9 h-9 rounded-full bg-white dark:bg-gray-800 border-[3px] border-emerald-400 flex items-center justify-center cursor-pointer hover:bg-emerald-50 dark:hover:bg-gray-700 shadow-lg hover:shadow-emerald-200 dark:hover:shadow-emerald-900 transition-all hidden sm:flex"
-            whileHover={{ 
+            whileHover={{
               scale: 1.02,
               borderColor: '#34D399',
             }}
@@ -57,9 +57,9 @@ const ProjectItem = ({
             }}
           >
             <motion.span
-              animate={{ 
+              animate={{
                 rotate: isExpanded ? 45 : 0,
-                color: isExpanded ? '#10B981' : '#34D399'
+                color: isExpanded ? '#10B981' : '#34D399',
               }}
               transition={{
                 type: 'spring',
@@ -101,7 +101,7 @@ const ProjectItem = ({
                   {location}
                 </span>
               </div>
-              
+
               {/* Links Section */}
               {links && (
                 <div className="flex flex-wrap gap-4 mt-2">
@@ -202,6 +202,23 @@ const ProjectItem = ({
 export const SideProjects = () => {
   const projects = [
     {
+      year: '07/2024 - 10/2024',
+      title: 'Mimosa TEK',
+      location: 'Ho Chi Minh',
+      appDetails: [
+        'Community platform for fish enthusiasts, featuring shop, auction, and online competition functionalities.',
+      ],
+      responsibilities: [
+        'Developed and integrated new features',
+        'Optimized app performance and fixed bugs to ensure stability.',
+      ],
+      links: {
+        web: 'https://mimosatek.com/',
+        ios: 'https://apps.apple.com/us/app//mimosatek/id1472868830',
+        android: 'https://play.google.com/store/apps/details?id=com.mimosatek',
+      },
+    },
+    {
       year: '10/2023 - Present',
       title: 'Betta Market',
       location: 'Ho Chi Minh',
@@ -241,4 +258,4 @@ export const SideProjects = () => {
       </div>
     </section>
   );
-}; 
+};

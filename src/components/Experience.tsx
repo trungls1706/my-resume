@@ -10,6 +10,7 @@ interface ExperienceItemProps {
     project: string;
     appDetails: string[];
     responsibilities: string[];
+    linkApps: { id: number; title: string; link: string }[] | null;
   }[];
   isLast: boolean;
 }
@@ -43,7 +44,7 @@ const ExperienceItem = ({
           <motion.button
             onClick={() => setIsExpanded(!isExpanded)}
             className="absolute right-[-15px] w-9 h-9 rounded-full bg-white dark:bg-gray-800 border-[3px] border-sky-400 flex items-center justify-center cursor-pointer hover:bg-sky-50 dark:hover:bg-gray-700 shadow-lg hover:shadow-sky-200 dark:hover:shadow-sky-900 transition-all hidden sm:flex"
-            whileHover={{ 
+            whileHover={{
               scale: 1.02,
               borderColor: '#38BDF8',
             }}
@@ -55,9 +56,9 @@ const ExperienceItem = ({
             }}
           >
             <motion.span
-              animate={{ 
+              animate={{
                 rotate: isExpanded ? 45 : 0,
-                color: isExpanded ? '#0EA5E9' : '#38BDF8'
+                color: isExpanded ? '#0EA5E9' : '#38BDF8',
               }}
               transition={{
                 type: 'spring',
@@ -99,7 +100,9 @@ const ExperienceItem = ({
                   {location}
                 </span>
               </div>
-              <h4 className="text-base sm:text-lg font-semibold text-sky-500 dark:text-sky-400">{position}</h4>
+              <h4 className="text-base sm:text-lg font-semibold text-sky-500 dark:text-sky-400">
+                {position}
+              </h4>
             </div>
 
             <AnimatePresence mode="wait">
@@ -159,6 +162,26 @@ const ExperienceItem = ({
                               </div>
                             ))}
                           </div>
+
+                          {/* Link Apps */}
+                          {item?.linkApps && (
+                            <div className="space-y-2 sm:space-y-3 mt-4 sm:mt-6">
+                              <h5 className="text-base sm:text-lg font-bold text-sky-500 dark:text-sky-400">
+                                Link Apps
+                              </h5>
+                              {item.linkApps.map((link, index) => (
+                                <div key={index} className="flex gap-2 sm:gap-3 items-start">
+                                  <div className="w-2 h-2 rounded-full bg-sky-300 dark:bg-sky-500 mt-2 flex-shrink-0" />
+                                  <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed font-medium">
+                                    {link.title} :{' '}
+                                    <a className="underline" href={link.link}>
+                                      {link.link}
+                                    </a>
+                                  </p>
+                                </div>
+                              ))}
+                            </div>
+                          )}
                         </div>
                       ))}
                     </div>
@@ -176,18 +199,73 @@ const ExperienceItem = ({
 export const Experience = () => {
   const experiences = [
     {
+      year: '08/2025 - Present',
+      company: 'Haravan',
+      position: 'Software Specialist',
+      location: 'Ho Chi Minh',
+      description: [
+        {
+          project: 'Zalo Mini Apps',
+          appDetails: ['Developed Zalo Mini Apps for multiple retail brands'],
+          responsibilities: [
+            'Designed and implemented project architecture to ensure scalability and maintainability.',
+            'Mentored junior developers on coding practices and project workflows.',
+            'Reviewed and refactored code for performance, scalability, and readability.',
+            'Collaborated with the team to maintain consistent business logic and UI/UX across brand apps.',
+          ],
+          linkApps: [
+            {
+              id: 0,
+              title: 'ONWAYS Rewards',
+              link: 'https://zalo.me/s/957354804063278119',
+            },
+            {
+              id: 0,
+              title: 'MARC Rewards',
+              link: 'https://zalo.me/s/3920331891151869531',
+            },
+          ],
+        },
+      ],
+    },
+    {
+      year: '06/2025 - Present',
+      company: 'Haravan',
+      position: 'Software Specialist',
+      location: 'Ho Chi Minh',
+      description: [
+        {
+          project: 'MAISON - POS MOBILE (React JS)',
+          appDetails: [
+            'A lightweight mobile version of the POS system designed for creating draft orders quickly and conveniently.',
+            'Focused on essential features such as product selection, customer information entry, and draft order management, optimized for mobile usage.',
+            'Provides a simplified and responsive interface, ensuring sales staff can efficiently create and manage draft orders outside the desktop environment.',
+          ],
+          responsibilities: [
+            'Project structure setup: designed and implemented the foundational architecture for the project, ensuring scalability and maintainability.',
+            'Contribute ideas, improve technology, and enhance the user experience of the application.',
+            'Managed app data and state using Context API and handled data fetching by Axios.',
+            'Developed a styled app using Tailwind CSS.',
+            'Monitoring, analysis and reporting app via Sentry, Microsoft clarity.',
+          ],
+          linkApps: null,
+        },
+      ],
+    },
+    {
       year: '10/2024 - Present',
       company: 'Haravan',
       position: 'Software Specialist',
       location: 'Ho Chi Minh',
       description: [
         {
-          project: 'MAISON - POS (React JS)',
+          project: 'MAISON - POS DESKTOP (React JS)',
           appDetails: [
             "A retail POS system for Maison's stores, supporting core sales operations such as product scanning, payment processing (cash, card, QR code), order management, inventory tracking, and revenue reporting.",
             'The system also includes features for managing promotions, generating sales receipts, handling refunds, and providing detailed sales analytics to assist in business decision-making.',
           ],
           responsibilities: ['Maintain the app, fix bugs, and add new features.'],
+          linkApps: null,
         },
       ],
     },
@@ -211,6 +289,7 @@ export const Experience = () => {
             'RFID Integration: Replaced traditional bar code scanning with RFID technology, improving product scanning speed and accuracy.',
             'Monitoring, analysis and reporting app via Sentry.',
           ],
+          linkApps: null,
         },
       ],
     },
@@ -233,6 +312,13 @@ export const Experience = () => {
             'Generate ideas, design, and create experiences based on customer requirements.',
             'Integrate auto build and auto deploy with CI/CD.',
           ],
+          linkApps: [
+            {
+              id: 0,
+              title: 'Loyalty cho Elite Partner của Pepsico Foods',
+              link: 'https://zalo.me/s/2285472306095214609',
+            },
+          ],
         },
       ],
     },
@@ -253,6 +339,7 @@ export const Experience = () => {
             'Ensured effective communication and user notifications through Firebase and React-Native-Insider.',
             'Deployed apps using native build tools, ensuring a smooth user experience.',
           ],
+          linkApps: null,
         },
         {
           project: 'Guardian Vietnam, CoupleTx, On Ways, The Cosmo, Sofia',
@@ -268,6 +355,7 @@ export const Experience = () => {
             'Monitoring, analysis and reporting app via Firebase Analytics, Sentry.',
             'Integrate auto build and auto deploy with CI/CD.',
           ],
+          linkApps: null,
         },
       ],
     },
@@ -289,6 +377,7 @@ export const Experience = () => {
             'Implemented routing with React Navigation and React Native Router Flux.',
             'Integrated Firebase Analytics for tracking and Sentry for crash reporting.',
           ],
+          linkApps: null,
         },
       ],
     },
@@ -306,6 +395,7 @@ export const Experience = () => {
             'Learned React Native components, API integration, debugging, and app deployment.',
             'Studied and implemented efficient source code structures.',
           ],
+          linkApps: null,
         },
       ],
     },

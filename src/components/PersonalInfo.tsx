@@ -8,18 +8,17 @@ interface PersonalInfoProps {
 export const PersonalInfo = ({ showDetails }: PersonalInfoProps) => {
   const skills = [
     'React Native',
+    'Expo',
     'React Js',
     'Next Js',
+    'Node Js',
     'Tailwind CSS',
     'Marterial UI',
     'Redux',
     'Context API',
     'JavaScript',
     'TypeScript',
-    'REST API',
-    'Axios',
-    'Expo',
-    'Firebase',
+    'AWS'
   ];
 
   return (
