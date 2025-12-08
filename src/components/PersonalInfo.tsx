@@ -18,9 +18,12 @@ export const PersonalInfo = ({ showDetails }: PersonalInfoProps) => {
     'Context API',
     'JavaScript',
     'TypeScript',
-    'AWS'
+    'AWS',
   ];
 
+  const onOpenCertificate = () =>{
+    window.open('https://www.credly.com/badges/94fc8a9e-0764-4e17-b37b-1d4abbe372d9/linked_in_profile');
+  }
   return (
     <motion.div
       initial={{ x: -20, opacity: 0 }}
@@ -131,6 +134,25 @@ export const PersonalInfo = ({ showDetails }: PersonalInfoProps) => {
                 </motion.span>
               ))}
             </div>
+          </motion.section>
+
+          <motion.section
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.9 }}
+            className="mb-6 lg:mb-0"
+          >
+            <h2 className="text-xl lg:text-2xl font-bold mb-3 lg:mb-4 text-gray-900 dark:text-white cursor-pointer hover:opacity-80 transition-opacity">
+              Certificates
+            </h2>
+            <motion.button
+              onClick={onOpenCertificate}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors flex items-center gap-2 text-sm"
+            >
+              AWS Certified Developer – Associate
+            </motion.button>
           </motion.section>
 
           <motion.section
