@@ -264,7 +264,11 @@ export const Experience = () => {
             "A retail POS system for Maison's stores, supporting core sales operations such as product scanning, payment processing (cash, card, QR code), order management, inventory tracking, and revenue reporting.",
             'The system also includes features for managing promotions, generating sales receipts, handling refunds, and providing detailed sales analytics to assist in business decision-making.',
           ],
-          responsibilities: ['Maintain the app, fix bugs, and add new features.'],
+          responsibilities: [
+            'Maintain the app, fix bugs, and add new features.',
+            'Refactor legacy code to improve readability and maintainability.',
+            'Reduce redundant code and simplify complex logic for better scalability.',
+          ],
           linkApps: null,
         },
       ],
