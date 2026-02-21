@@ -26,45 +26,35 @@ export const PersonalInfo = ({ showDetails }: PersonalInfoProps) => {
       id: 0,
       title: 'AWS Certified Developer – Associate',
       onClick: () => {
-        window.open(
-          'https://www.credly.com/badges/94fc8a9e-0764-4e17-b37b-1d4abbe372d9'
-        );
+        window.open('https://www.credly.com/badges/94fc8a9e-0764-4e17-b37b-1d4abbe372d9');
       },
     },
     {
       id: 0,
       title: 'Rest API (Intermediate) Certificate',
       onClick: () => {
-        window.open(
-          'https://www.hackerrank.com/certificates/c10d5ef03890'
-        );
+        window.open('https://www.hackerrank.com/certificates/c10d5ef03890');
       },
     },
     {
       id: 0,
       title: 'JavaScript (Intermediate) Certificate',
       onClick: () => {
-        window.open(
-          'https://www.hackerrank.com/certificates/2d9ccea95d8d'
-        );
+        window.open('https://www.hackerrank.com/certificates/2d9ccea95d8d');
       },
     },
     {
       id: 0,
       title: 'Frontend Developer (React) Certificate',
       onClick: () => {
-        window.open(
-          'https://www.hackerrank.com/certificates/b0debef1ccdd'
-        );
+        window.open('https://www.hackerrank.com/certificates/b0debef1ccdd');
       },
     },
     {
       id: 0,
       title: 'CSS (Basic) Certificate ',
       onClick: () => {
-        window.open(
-          'https://www.hackerrank.com/certificates/53e33645c7f7'
-        );
+        window.open('https://www.hackerrank.com/certificates/53e33645c7f7');
       },
     },
   ];
@@ -191,19 +181,22 @@ export const PersonalInfo = ({ showDetails }: PersonalInfoProps) => {
               Certificates
             </h2>
 
-              <div className="flex flex-wrap gap-2">
-                    {certificates?.map((certificate, index) => (
-              <motion.button
-                key={index}
-                onClick={certificate.onClick}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors flex items-center gap-2 text-sm"
-              >
-                {certificate.title}
-              </motion.button>
-            ))}
-              </div>
+            <div className="flex flex-wrap gap-2">
+              {certificates?.map((certificate, index) => (
+                <motion.button
+                  key={index}
+                  onClick={certificate.onClick}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ delay: 0.8 + index * 0.1 }}
+                  className="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors flex items-center gap-2 text-sm"
+                >
+                  {certificate.title}
+                </motion.button>
+              ))}
+            </div>
           </motion.section>
 
           <motion.section
