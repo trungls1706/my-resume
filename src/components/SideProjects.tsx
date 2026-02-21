@@ -202,6 +202,25 @@ const ProjectItem = ({
 export const SideProjects = () => {
   const projects = [
     {
+      year: '01/2026 - Present',
+      title: 'PTEElite',
+      location: 'Ho Chi Minh',
+      appDetails: [
+        'Online education platform for PTE learners, featuring landing page, user registration system, online mock tests, and an admin dashboard for managing student data.',
+      ],
+      responsibilities: [
+        'Independently designed and developed a full-stack PTE education platform based on user requirements.',
+        'Architected and implemented the system using Next.js (App Router) and Supabase (Auth, PostgreSQL, Storage, RLS).',
+        'Designed UI following Google Material Design, prototyped with Stitch (stitch.withgoogle.com).',
+        'Built secure user registration, authentication, and role-based access control.',
+        'Structured database schema and access policies to ensure data security and scalability.',
+        'Optimized SEO and performance for production deployment.'
+      ],
+      links: {
+        web: 'https://pteelite.edu.vn',
+      },
+    },
+    {
       year: '07/2024 - 10/2024',
       title: 'Mimosa TEK',
       location: 'Ho Chi Minh',
@@ -213,13 +232,13 @@ export const SideProjects = () => {
         'Optimized app performance and fixed bugs to ensure stability.',
       ],
       links: {
-        web: 'https://mimosatek.com/',
+        web: 'https://mimosatek.com',
         ios: 'https://apps.apple.com/us/app//mimosatek/id1472868830',
         android: 'https://play.google.com/store/apps/details?id=com.mimosatek',
       },
     },
     {
-      year: '10/2023 - Present',
+      year: '10/2023 - 02/2025',
       title: 'Betta Market',
       location: 'Ho Chi Minh',
       appDetails: [

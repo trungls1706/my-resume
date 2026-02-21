@@ -103,12 +103,12 @@ const EducationItem = ({
                     Major: {major}
                   </p>
                 </div>
-                <div className="flex gap-2 sm:gap-3 items-start">
+                {/* <div className="flex gap-2 sm:gap-3 items-start">
                   <div className="w-2 h-2 rounded-full bg-amber-300 dark:bg-amber-500 mt-2 flex-shrink-0" />
                   <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed font-medium">
                     GPA: {gpa}
                   </p>
-                </div>
+                </div> */}
               </div>
             </div>
           </motion.div>
