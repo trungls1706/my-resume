@@ -199,7 +199,7 @@ const ExperienceItem = ({
 export const Experience = () => {
   const experiences = [
     {
-      year: '08/2025 - Present',
+      year: '08/2025 - 02/2026',
       company: 'Haravan',
       position: 'Software Specialist',
       location: 'Ho Chi Minh',
@@ -229,7 +229,7 @@ export const Experience = () => {
       ],
     },
     {
-      year: '06/2025 - Present',
+      year: '06/2025 - 02/2026',
       company: 'Haravan',
       position: 'Software Specialist',
       location: 'Ho Chi Minh',
@@ -253,7 +253,7 @@ export const Experience = () => {
       ],
     },
     {
-      year: '10/2024 - Present',
+      year: '10/2024 - 02/2026',
       company: 'Haravan',
       position: 'Software Specialist',
       location: 'Ho Chi Minh',
@@ -274,7 +274,7 @@ export const Experience = () => {
       ],
     },
     {
-      year: '06/2024 - Present',
+      year: '06/2024 - 02/2026',
       company: 'Haravan',
       position: 'Software Specialist',
       location: 'Ho Chi Minh',
