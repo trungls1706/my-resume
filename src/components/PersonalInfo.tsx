@@ -85,7 +85,7 @@ export const PersonalInfo = ({ showDetails }: PersonalInfoProps) => {
             className="w-24 h-24 lg:w-32 lg:h-32 bg-gray-300 dark:bg-gray-700 rounded-full mx-auto mb-4"
           ></motion.div> */}
           <h1 className="text-3xl lg:text-4xl font-bold mb-2 text-gray-900 dark:text-white">
-            Ly Son Trung
+            Trung Ly
           </h1>
           <p className="text-lg lg:text-xl text-gray-600 dark:text-gray-400 mb-4">
             Frontend React Developer
@@ -131,22 +131,6 @@ export const PersonalInfo = ({ showDetails }: PersonalInfoProps) => {
                 </svg>
               </motion.a>
               <motion.a
-                href="https://trungls1706.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.1 }}
-                className="p-2 bg-[#0EA5E9] text-white rounded-lg hover:bg-[#0284C7] transition-colors"
-                title="Personal Website"
-              >
-                <svg
-                  className="w-5 h-5 fill-current"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-1.25 18.25v-1.5h2.5v1.5h-2.5zm6.5-6.5c0 1.38-1.12 2.5-2.5 2.5s-2.5-1.12-2.5-2.5c0-.69.28-1.31.73-1.77l.77.77c-.31.31-.5.73-.5 1.23 0 .97.78 1.75 1.75 1.75s1.75-.78 1.75-1.75c0-.49-.2-.92-.5-1.23l.77-.77c.45.46.73 1.08.73 1.77zM12 4.5c4.14 0 7.5 3.36 7.5 7.5 0 1.54-.47 2.97-1.27 4.15l-1.07-1.07c.52-.89.84-1.94.84-3.08 0-3.31-2.69-6-6-6s-6 2.69-6 6c0 1.14.32 2.19.84 3.08l-1.07 1.07C5.47 14.97 5 13.54 5 12c0-4.14 3.36-7.5 7.5-7.5zm-3.25 7.5c0 1.38 1.12 2.5 2.5 2.5s2.5-1.12 2.5-2.5c0-.69-.28-1.31-.73-1.77l-.77.77c.31.31.5.73.5 1.23 0 .97-.78 1.75-1.75 1.75s-1.75-.78-1.75-1.75c0-.49.2-.92.5-1.23l-.77-.77c-.45.46-.73 1.08-.73 1.77z" />
-                </svg>
-              </motion.a>
-              <motion.a
                 href="https://leetcode.com/u/trungls1706/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -179,8 +163,9 @@ export const PersonalInfo = ({ showDetails }: PersonalInfoProps) => {
             </h2>
             <p className="text-gray-600 dark:text-gray-400 text-sm lg:text-base">
               Passionate Frontend Developer with 5+ years of experience in building mobile and web
-              applications. Specialized in React Native, ReactJS, NextJS and modern frontend technologies.
-              Proactively expand skill set into backend development (NodeJS, NestJS) to better support full-stack requirements when needed.
+              applications. Specialized in React Native, ReactJS, NextJS and modern frontend
+              technologies.<br /> Proactively expand skill set into backend development (NodeJS, NestJS)
+              to better support full-stack requirements when needed.
             </p>
           </motion.section>
 
@@ -225,7 +210,7 @@ export const PersonalInfo = ({ showDetails }: PersonalInfoProps) => {
                   onClick={certificate.onClick}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                initial={{ scale: 0 }}
+                  initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ delay: 0.8 + index * 0.1 }}
                   className="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors flex items-center gap-2 text-sm"
