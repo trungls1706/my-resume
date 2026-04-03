@@ -121,7 +121,7 @@ const EducationItem = ({
 export const Education = () => {
   const educations = [
     {
-      year: '2013 — 2018',
+      year: '01/2013 - 01/2018',
       university: 'NGUYEN TAT THANH UNIVERSITY',
       location: 'Ho Chi Minh',
       major: 'Software Engineering',

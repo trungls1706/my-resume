@@ -12,6 +12,10 @@ export const PersonalInfo = ({ showDetails }: PersonalInfoProps) => {
     'React Js',
     'Next Js',
     'Node Js',
+    'Nest JS',
+    'Supabase',
+    'MongoDB',
+    'Docker',
     'Tailwind CSS',
     'Marterial UI',
     'Redux',
@@ -111,6 +115,38 @@ export const PersonalInfo = ({ showDetails }: PersonalInfoProps) => {
                 </svg>
               </motion.a>
               <motion.a
+                href="https://github.com/trungls1706"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1 }}
+                className="p-2 bg-[#333] text-white rounded-lg hover:bg-[#24292e] transition-colors"
+                title="GitHub Profile"
+              >
+                <svg
+                  className="w-5 h-5 fill-current"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                </svg>
+              </motion.a>
+              <motion.a
+                href="https://trungls1706.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1 }}
+                className="p-2 bg-[#0EA5E9] text-white rounded-lg hover:bg-[#0284C7] transition-colors"
+                title="Personal Website"
+              >
+                <svg
+                  className="w-5 h-5 fill-current"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-1.25 18.25v-1.5h2.5v1.5h-2.5zm6.5-6.5c0 1.38-1.12 2.5-2.5 2.5s-2.5-1.12-2.5-2.5c0-.69.28-1.31.73-1.77l.77.77c-.31.31-.5.73-.5 1.23 0 .97.78 1.75 1.75 1.75s1.75-.78 1.75-1.75c0-.49-.2-.92-.5-1.23l.77-.77c.45.46.73 1.08.73 1.77zM12 4.5c4.14 0 7.5 3.36 7.5 7.5 0 1.54-.47 2.97-1.27 4.15l-1.07-1.07c.52-.89.84-1.94.84-3.08 0-3.31-2.69-6-6-6s-6 2.69-6 6c0 1.14.32 2.19.84 3.08l-1.07 1.07C5.47 14.97 5 13.54 5 12c0-4.14 3.36-7.5 7.5-7.5zm-3.25 7.5c0 1.38 1.12 2.5 2.5 2.5s2.5-1.12 2.5-2.5c0-.69-.28-1.31-.73-1.77l-.77.77c.31.31.5.73.5 1.23 0 .97-.78 1.75-1.75 1.75s-1.75-.78-1.75-1.75c0-.49.2-.92.5-1.23l-.77-.77c-.45.46-.73 1.08-.73 1.77z" />
+                </svg>
+              </motion.a>
+              <motion.a
                 href="https://leetcode.com/u/trungls1706/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -143,7 +179,8 @@ export const PersonalInfo = ({ showDetails }: PersonalInfoProps) => {
             </h2>
             <p className="text-gray-600 dark:text-gray-400 text-sm lg:text-base">
               Passionate Frontend Developer with 5+ years of experience in building mobile and web
-              applications. Specialized in React Native, React JS and modern frontend technologies.
+              applications. Specialized in React Native, ReactJS, NextJS and modern frontend technologies.
+              Proactively expand skill set into backend development (NodeJS, NestJS) to better support full-stack requirements when needed.
             </p>
           </motion.section>
 
@@ -196,6 +233,25 @@ export const PersonalInfo = ({ showDetails }: PersonalInfoProps) => {
                   {certificate.title}
                 </motion.button>
               ))}
+            </div>
+          </motion.section>
+
+          <motion.section
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.9 }}
+            className="lg:mb-0"
+          >
+            <h2 className="text-xl lg:text-2xl font-bold mb-3 lg:mb-4 text-gray-900 dark:text-white cursor-pointer hover:opacity-80 transition-opacity">
+              Languages
+            </h2>
+            <div className="space-y-2">
+              <p className="text-sm lg:text-base text-gray-600 dark:text-gray-400">
+                Vietnamese (Native proficiency)
+              </p>
+              <p className="text-sm lg:text-base text-gray-600 dark:text-gray-400">
+                English (Limited working proficiency)
+              </p>
             </div>
           </motion.section>
 

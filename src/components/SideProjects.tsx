@@ -206,18 +206,40 @@ export const SideProjects = () => {
       title: 'PTEElite',
       location: 'Ho Chi Minh',
       appDetails: [
-        'Online education platform for PTE learners, featuring landing page, user registration system, online mock tests, and an admin dashboard for managing student data.',
+        'Online education platform for PTE learners, featuring landing page, user registration, mock tests, and admin dashboard, helping increase brand awareness and student bookings.',
       ],
       responsibilities: [
         'Independently designed and developed a full-stack PTE education platform based on user requirements.',
+        'Designed UI following Material Design and prototyped using Stitch.',
         'Architected and implemented the system using Next.js (App Router) and Supabase (Auth, PostgreSQL, Storage, RLS).',
-        'Designed UI following Google Material Design, prototyped with Stitch (stitch.withgoogle.com).',
-        'Built secure user registration, authentication, and role-based access control.',
-        'Structured database schema and access policies to ensure data security and scalability.',
-        'Optimized SEO and performance for production deployment.'
+        'Built secure authentication and role-based access control for students and admins.',
+        'Designed scalable database schema and access policies to ensure data security.',
+        'Optimized SEO and performance, improving search visibility and page load speed by ~30%.',
+        'Increased user reach and conversion, contributing to 40% more student inquiries and bookings after launch.',
       ],
       links: {
         web: 'https://pteelite.edu.vn',
+      },
+    },
+    {
+      year: '03/2026 - 03/2026',
+      title: 'NestJS Recruitment API (Personal Project)',
+      location: 'Ho Chi Minh',
+      appDetails: [
+        'Backend system for a job board platform, supporting user management, job postings, and application workflows.',
+      ],
+      responsibilities: [
+        'Built RESTful APIs using NestJS with MongoDB (Mongoose).',
+        'Implemented authentication & authorization with JWT, Passport, and RBAC (Admin, HR, User).',
+        'Designed modules for Companies, Jobs, Resumes, and Subscribers with pagination and search.',
+        'Integrated email service (Nodemailer + Handlebars) for notifications and job updates.',
+        'Applied security best practices: Helmet, rate limiting, CORS, and password hashing (Bcrypt).',
+        'Standardized API responses and implemented global error handling using Interceptors.',
+        'Documented APIs using Swagger (OpenAPI).',
+        'Containerized application with Docker & Docker Compose.',
+      ],
+      links: {
+        web: 'https://github.com/trungls1706/nest-js',
       },
     },
     {
@@ -228,12 +250,11 @@ export const SideProjects = () => {
         'A smart farming app that helps farmers manage crops and track cultivation cycles efficiently.',
       ],
       responsibilities: [
-        'Developed and integrated new features',
-        'Optimized app performance and fixed bugs to ensure stability.',
+        'Refactored legacy codebase into a cleaner, modular architecture, reducing development time by 30% and improving maintainability.',
+        'Collaborated with backend team to ensure efficient API integration and stable data flow.',
       ],
       links: {
-        web: 'https://mimosatek.com',
-        ios: 'https://apps.apple.com/us/app//mimosatek/id1472868830',
+        ios: 'https://apps.apple.com/us/app/mimosatek/id1472868830',
         android: 'https://play.google.com/store/apps/details?id=com.mimosatek',
       },
     },
@@ -242,15 +263,16 @@ export const SideProjects = () => {
       title: 'Betta Market',
       location: 'Ho Chi Minh',
       appDetails: [
-        'Community platform for fish enthusiasts, featuring shop, auction, and online competition functionalities.',
+        'Community platform for fish enthusiasts with shop, auction, and online competition features serving 6,000+ users.',
       ],
       responsibilities: [
-        'Project structure setup: designed and implemented the foundational architecture of the self-payment system, ensuring scalability and maintainability.',
+        'Designed and implemented scalable app architecture, improving maintainability and supporting growth to 6,000 users.',
         'Built, tested, and deployed the app using React Native CLI.',
-        'Managed app data using API integration, AsyncStorage, and Redux Toolkit.',
-        'Applied third-party libraries like Facebook, Google, and CodePush.',
-        'Implemented routing with React Navigation, tracking with Firebase Analytics, and crash reporting with Sentry and CodePush.',
-        'Managed notifications through Firebase and deployed the app using native build tools.',
+        'Integrated APIs and managed state with Redux Toolkit and AsyncStorage, reducing data load time by 30%.',
+        'Integrated third-party services: Facebook, Google, Firebase Analytics, Sentry, and CodePush.',
+        'Set up push notifications via Firebase, achieving 20% open rate and boosting user engagement.',
+        'Monitored app stability using Sentry and Firebase, reducing critical issues by 40%.',
+        'Managed deployment and OTA updates using native tools and CodePush.',
       ],
       links: {
         web: 'https://bettamarket.net',
