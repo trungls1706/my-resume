@@ -164,7 +164,7 @@ export const PersonalInfo = ({ showDetails }: PersonalInfoProps) => {
             <p className="text-gray-600 dark:text-gray-400 text-sm lg:text-base">
               Passionate Frontend Developer with 5+ years of experience in building mobile and web
               applications. Specialized in React Native, ReactJS, NextJS and modern frontend
-              technologies.<br /> Proactively expand skill set into backend development (NodeJS, NestJS)
+              technologies.<br /> Proactively expand skill set into backend development NodeJS, NestJS
               to better support full-stack requirements when needed.
             </p>
           </motion.section>
