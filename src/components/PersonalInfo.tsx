@@ -33,34 +33,34 @@ export const PersonalInfo = ({ showDetails }: PersonalInfoProps) => {
         window.open('https://www.credly.com/badges/94fc8a9e-0764-4e17-b37b-1d4abbe372d9');
       },
     },
-    {
-      id: 0,
-      title: 'Rest API (Intermediate) Certificate',
-      onClick: () => {
-        window.open('https://www.hackerrank.com/certificates/c10d5ef03890');
-      },
-    },
-    {
-      id: 0,
-      title: 'JavaScript (Intermediate) Certificate',
-      onClick: () => {
-        window.open('https://www.hackerrank.com/certificates/2d9ccea95d8d');
-      },
-    },
-    {
-      id: 0,
-      title: 'Frontend Developer (React) Certificate',
-      onClick: () => {
-        window.open('https://www.hackerrank.com/certificates/b0debef1ccdd');
-      },
-    },
-    {
-      id: 0,
-      title: 'CSS (Basic) Certificate ',
-      onClick: () => {
-        window.open('https://www.hackerrank.com/certificates/53e33645c7f7');
-      },
-    },
+    // {
+    //   id: 0,
+    //   title: 'Rest API (Intermediate) Certificate',
+    //   onClick: () => {
+    //     window.open('https://www.hackerrank.com/certificates/c10d5ef03890');
+    //   },
+    // },
+    // {
+    //   id: 0,
+    //   title: 'JavaScript (Intermediate) Certificate',
+    //   onClick: () => {
+    //     window.open('https://www.hackerrank.com/certificates/2d9ccea95d8d');
+    //   },
+    // },
+    // {
+    //   id: 0,
+    //   title: 'Frontend Developer (React) Certificate',
+    //   onClick: () => {
+    //     window.open('https://www.hackerrank.com/certificates/b0debef1ccdd');
+    //   },
+    // },
+    // {
+    //   id: 0,
+    //   title: 'CSS (Basic) Certificate ',
+    //   onClick: () => {
+    //     window.open('https://www.hackerrank.com/certificates/53e33645c7f7');
+    //   },
+    // },
   ];
 
   return (
